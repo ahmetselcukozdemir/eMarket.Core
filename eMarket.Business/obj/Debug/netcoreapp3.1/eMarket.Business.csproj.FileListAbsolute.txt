@@ -1,0 +1,17 @@
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Business.deps.json
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Business.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Business.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.csprojAssemblyReference.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.AssemblyInfoInputs.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.AssemblyInfo.cs
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Business.runtimeconfig.json
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Business.runtimeconfig.dev.json
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.genruntimeconfig.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Data.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Entity.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Data.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\bin\Debug\netcoreapp3.1\eMarket.Entity.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket\eMarket.Business\obj\Debug\netcoreapp3.1\eMarket.Business.csproj.CopyComplete

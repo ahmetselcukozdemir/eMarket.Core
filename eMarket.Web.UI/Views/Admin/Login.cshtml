@@ -1,0 +1,93 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="~/admin/login/images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="~/admin/login/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/admin/login/css/main.css">
+</head>
+<body style="background-color: #666666;">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" asp-action="Login" asp-controller="Admin" method="post">
+                    <span class="login100-form-title p-b-43">
+                        Mağaza Girişi
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="" name="admin_email">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Email</span>
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="" name="admin_password">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Şifre</span>
+                    </div>
+                    @{
+                        if (@ViewBag.ErrorMessageLogin != null)
+                        {
+                            <div class="container">
+                                <div class="row">
+                                    <div class="alert-group">
+                                        <div class="alert alert-danger alert-dismissable">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            <strong>Hata !</strong> @ViewBag.ErrorMessageLogin
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    <div class="flex-sb-m w-full p-t-3 p-b-32">
+                        <div>
+                            <a href="#">
+                                <strong>|</strong> Şifremi Unuttum
+                            </a>
+                        </div> <div>
+                            <a href="/Home/Index/">
+                                Siteye Dön <strong>|</strong>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <input type="submit" class="login100-form-btn" value="Giriş Yap" />
+                    </div>
+
+                </form>
+
+                <div class="login100-more" style="background-image: url('http://e-dogalmarket.com/images/test22.jpg');">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/admin/login/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="~/admin/login/vendor/animsition/js/animsition.min.js"></script>
+    <script src="~/admin/login/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/admin/login/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/admin/login/vendor/select2/select2.min.js"></script>
+    <script src="~/admin/login/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/admin/login/vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="~/admin/login/vendor/countdowntime/countdowntime.js"></script>
+    <script src="~/admin/login/js/main.js"></script>
+</body>
+</html>

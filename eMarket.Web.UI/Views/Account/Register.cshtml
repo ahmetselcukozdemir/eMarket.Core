@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@Html.Partial("_MenuTwoLayout")
+<!--/ End Header Inner -->
+</header>
+
+
+<div class="container" style="margin-top: 100px; min-height: 500px;">
+    <div class="col-md-12 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Üye Ol</strong></h3>
+            </div>
+            <br />
+            <div class="panel-body">
+                <form role="form" method="post" asp-action="Register" asp-controller="Account">
+                    @{
+                        if (@ViewBag.ErrorMessage != null)
+                        {
+                            <div class="alert alert-danger">
+                                <a class="close" data-dismiss="alert" href="#">×</a>@ViewBag.ErrorMessage
+                            </div>
+                        }
+                        if (@ViewBag.SuccessMessage != null)
+                        {
+                            <div class="alert alert-success">
+                                <a class="close" data-dismiss="alert" href="#">×</a>@ViewBag.SuccessMessage
+                            </div>
+                        }
+                    }
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="FirstName" id="first_name" class="form-control" placeholder="Adınız" tabindex="1">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="LastName" id="middle_name" class="form-control" placeholder="Soyadınız.." tabindex="1">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="Birthday" id="date" data-inputmask="'alias': 'date'" class="form-control js-date " maxlength="10" placeholder="Doğum Tarihiniz.." tabindex="3">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="email" name="Email" id="email" class="form-control " placeholder="Email Adresiniz" tabindex="4">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="password" name="Password" id="password" class="form-control " placeholder="Şifreniz" tabindex="5">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="password" name="RePassword" id="password_confirmation" class="form-control " placeholder="Şifre Tekrarı" tabindex="6">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <button type="submit" class="btn btn-success">Üye Ol</button>
+                    <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                    <div class="form-group">
+
+                        <div style="font-size: 85%">
+                            Hesabın var mı ?
+                            <a href="/Account/Login/">
+                                Oturum Aç
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var input = document.querySelectorAll('.js-date')[0];
+
+    var dateInputMask = function dateInputMask(elm) {
+        elm.addEventListener('keypress', function (e) {
+            if (e.keyCode < 47 || e.keyCode > 57) {
+                e.preventDefault();
+            }
+
+            var len = elm.value.length;
+
+            // If we're at a particular place, let the user type the slash
+            // i.e., 12/12/1212
+            if (len !== 1 || len !== 3) {
+                if (e.keyCode == 47) {
+                    e.preventDefault();
+                }
+            }
+
+            // If they don't add the slash, do it for them...
+            if (len === 2) {
+                elm.value += '/';
+            }
+
+            // If they don't add the slash, do it for them...
+            if (len === 5) {
+                elm.value += '/';
+            }
+        });
+    };
+
+    dateInputMask(input);
+</script>

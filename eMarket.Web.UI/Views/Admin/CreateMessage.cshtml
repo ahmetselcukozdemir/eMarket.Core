@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "CreateMessage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content">
+<div class="animated fadeIn">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Mesaj/Talep Oluştur</strong> <small> yöneticiye</small>
+                </div>
+                <div class="card-body card-block">
+                    
+
+                           @using (Html.BeginForm("CreateMessageMembers", "Admin", FormMethod.Post))
+                            {
+                           
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Konu</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                            <select name="subject" class="form-control">
+                                                <option selected="selected" disabled="disabled">Seçiniz..</option>
+                                                <option value="Kategori Talebi">Kategori Talebi</option>
+                                                <option value="Şikayet">Şikayet</option>
+                                                <option value="Kişisel Mesaj">Kişisel Mesaj</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Mesajınız</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                            <textarea type="text" name="Content" id="editor" placeholder="Açıklama.." class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" value="Mesaj/Talep Oluştur" />
+                                }
+                           
+                        
+                      
+                      
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<script src="~/lib/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor');
+</script>
+
+
