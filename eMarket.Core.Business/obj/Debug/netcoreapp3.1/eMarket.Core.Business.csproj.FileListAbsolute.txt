@@ -1,0 +1,17 @@
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Entity.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.csprojAssemblyReference.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.AssemblyInfoInputs.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.AssemblyInfo.cs
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Business.deps.json
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Business.runtimeconfig.json
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Business.runtimeconfig.dev.json
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Business.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Business.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Data.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Data.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\bin\Debug\netcoreapp3.1\eMarket.Core.Entity.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.csproj.CopyComplete
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Business\obj\Debug\netcoreapp3.1\eMarket.Core.Business.genruntimeconfig.cache

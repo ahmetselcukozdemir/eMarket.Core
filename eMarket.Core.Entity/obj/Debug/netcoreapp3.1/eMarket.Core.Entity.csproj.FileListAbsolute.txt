@@ -1,0 +1,12 @@
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\bin\Debug\netcoreapp3.1\eMarket.Core.Entity.deps.json
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\bin\Debug\netcoreapp3.1\eMarket.Core.Entity.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\obj\Debug\netcoreapp3.1\eMarket.Core.Entity.csprojAssemblyReference.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\obj\Debug\netcoreapp3.1\eMarket.Core.Entity.AssemblyInfoInputs.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\obj\Debug\netcoreapp3.1\eMarket.Core.Entity.AssemblyInfo.cs
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\bin\Debug\netcoreapp3.1\eMarket.Core.Entity.runtimeconfig.json
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\bin\Debug\netcoreapp3.1\eMarket.Core.Entity.runtimeconfig.dev.json
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\obj\Debug\netcoreapp3.1\eMarket.Core.Entity.genruntimeconfig.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\bin\Debug\netcoreapp3.1\eMarket.Core.Entity.pdb
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\obj\Debug\netcoreapp3.1\eMarket.Core.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\obj\Debug\netcoreapp3.1\eMarket.Core.Entity.dll
+C:\Users\ahmet\source\repos\eMarket\eMarket.Core\eMarket.Core.Entity\obj\Debug\netcoreapp3.1\eMarket.Core.Entity.pdb

@@ -1,0 +1,74 @@
+﻿@model eMarket.Core.Web.UI.Models.Home.HomeProductModel
+<div class="header-inner">
+    <div class="container">
+        <div class="cat-nav-head">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="all-category">
+                        <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>Kategoriler</h3>
+                        <ul class="main-category">
+                            @{
+                                @foreach (var category in Model.Categories)
+                                {
+                                    <li class="test">
+
+                                        @Html.Hidden("catID", category.categoryID)
+                                        <a href="#">@category.Name <i class=" test fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="sub-category">
+                                            @foreach (var subcategory in Model.SubCategories)
+                                            {
+                                                @if (subcategory.CategoryID == category.categoryID)
+                                                {
+                                                    <li><a href="/Shop/Products/@subcategory.subCategoryID/">@subcategory.Name</a></li>
+                                                }
+
+                                            }
+                                        </ul>
+
+
+                                    </li>
+                                }
+                            }
+                          
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <div class="menu-area">
+                        <!-- Main Menu -->
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="navbar-collapse">
+                                <div class="nav-inner">
+                                    <ul class="nav main-menu menu navbar-nav">
+                                        <li class="active"><a href="/Home/Index/">Anasayfa</a></li>
+                                        <li><a href="/Shop/Products/">Ürünler</a></li>
+                                        <li>
+                                            <a href="#">Mağazalar<i class="ti-angle-down"></i><span class="new">New</span></a>
+                                            <ul class="dropdown">
+                                                <li><a href="shop-grid.html">Mağazalar</a></li>
+                                                <li><a href="cart.html">Mağaza Aç</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="contact.html">İletişim</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <!--/ End Main Menu -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.test a.test').on("click", function (e) {
+            $(this).next('sub-category').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });}
+</script>

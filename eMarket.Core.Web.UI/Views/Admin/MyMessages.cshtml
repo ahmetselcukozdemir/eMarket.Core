@@ -1,0 +1,139 @@
+﻿@model IEnumerable<eMarket.Core.Entity.Message>
+@{
+    ViewData["Title"] = "MyMessages";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    
+}
+
+<link rel="stylesheet" href="~/admin/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1 style="font-weight: bold;">Blog Yazılarım</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                       Toplam <strong>@Model.Count()</strong> tane mesajınız vardır.
+                    </div>
+                    <div class="card-body">
+                        @{
+                            if (ViewBag.ErrorMessage != null)
+                            {
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="alert-group">
+                                            <div class="alert alert-danger alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                <strong>Hata !</strong> @ViewBag.ErrorMessage
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Konu</th>
+                                            <th>Tarih</th>
+                                            <th>Kullanıcı Adı</th>
+                                            <th>Okunmuş Mu ?</th>
+                                            <th>Oku</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                            foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>@item.Subject</td>
+                                                    <td>@item.CreatedDate.ToString("d")</td>
+                                                    <td>@item.Member.Name  @item.Member.Surname</td>
+                                                    <td>@{
+                                                        if (@item.IsChecked == false)
+                                                        {
+                                                            <div class="row">
+                                                                <div class="alert-group">
+                                                                    <div class="alert alert-danger alert-dismissable">
+                                                                        <strong>Okunmamış !</strong> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                        else
+                                                        {
+                                                            <div class="row">
+                                                                <div class="alert-group">
+                                                                    <div class="alert alert-success alert-dismissable">
+                                                                        <strong>Okunmuş !</strong> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                        }
+                                                    </td>
+                                                    <td><a href="/Admin/MessagesDetail/@item.GuidNumber" class="btn btn-primary">Oku</a></td>
+                                                  </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#bootstrap-data-table-export').DataTable();
+    });
+</script>
+
+
+<script src="~/admin/assets/js/lib/data-table/datatables.min.js"></script>
+<script src="~/admin/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+<script src="~/admin/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+<script src="~/admin/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+<script src="~/admin/assets/js/lib/data-table/jszip.min.js"></script>
+<script src="~/admin/assets/js/lib/data-table/vfs_fonts.js"></script>
+<script src="~/admin/assets/js/lib/data-table/buttons.html5.min.js"></script>
+<script src="~/admin/assets/js/lib/data-table/buttons.print.min.js"></script>
+<script src="~/admin/assets/js/lib/data-table/buttons.colVis.min.js"></script>
+<script src="~/admin/assets/js/init/datatables-init.js"></script>
+
+
