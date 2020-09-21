@@ -7,7 +7,6 @@
 <!--/ End Header Inner -->
 </header>
 
-<link rel="stylesheet" type="text/css" href="~/product-details/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="~/product-details/vendor/animate/animate.css">
 <!--===============================================================================================-->
@@ -106,6 +105,7 @@
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
                 <strong>Benzer Ürünler </strong>
+                <hr />
             </h3>
         </div>
 
@@ -119,16 +119,16 @@
                     foreach (var item in Model.RelatedProducts)
                     { 
                         var imageHome = item.ProductImages.Where(x => x.IsHome == true).FirstOrDefault();
-                        <div class="item-slick2 p-l-15 p-r-15">
+                        <div href="/Shop/Details/@item.ProductId" class="item-slick2 p-l-15 p-r-15">
                             <div class="block2">
-                                <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                                <div style="height: 300px;" class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
                                     @if (imageHome != null)
                                     {
-                                        <img src="~/images/products/@imageHome.Url" alt="IMG-PRODUCT">
+                                        <img href="/Shop/Details/@item.ProductId" src="~/images/products/@imageHome.Url" alt="IMG-PRODUCT" href="/Shop/Details/@item.ProductId">
                                     }
                                     else
                                     {
-                                        <img class="default-img" src="~/images/notimages.jpg" alt="#">
+                                        <img href="/Shop/Details/@item.ProductId" class="default-img" src="~/images/notimages.jpg" alt="#" href="/Shop/Details/@item.ProductId">
                                     }
 
                                     <div class="block2-overlay trans-0-4">
@@ -140,7 +140,7 @@
                                 </div>
 
                                 <div class="block2-txt p-t-20">
-                                    <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                    <a href="/Shop/Details/@item.ProductId" class="block2-name dis-block s-text3 p-b-5">
                                         @item.Name
                                     </a>
 

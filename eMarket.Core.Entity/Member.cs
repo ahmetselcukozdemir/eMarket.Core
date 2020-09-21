@@ -21,6 +21,7 @@ namespace eMarket.Core.Entity
         public string Phone { get; set; }
         public bool IsActive { get; set; }
         public bool IsAdmin { get; set; }
+        public bool IsCheck{ get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime LastActivityDate { get; set; }
         public List<Product> Products { get; set; }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eMarket.Core.Data.Concrete.EfCore;
 
 namespace eMarket.Core.Data.Migrations
 {
     [DbContext(typeof(eMarketContext))]
-    partial class eMarketContextModelSnapshot : ModelSnapshot
+    [Migration("20200917001737_AddIsCheckMember")]
+    partial class AddIsCheckMember
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

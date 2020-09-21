@@ -14,6 +14,12 @@ namespace eMarket.Core.Business.Concrete
         {
             _memberRepository = memberRepository;
         }
+
+        public List<Member> AllMemberIsHome()
+        {
+            return _memberRepository.AllMemberIsHome();
+        }
+
         public bool Create(Member entity)
         {
             if (entity != null)
@@ -43,6 +49,16 @@ namespace eMarket.Core.Business.Concrete
         public Member GetByMailAndPasswordWithUser(string admin_email, string admin_password)
         {
             return _memberRepository.GetByMailAndPasswordWithUser(admin_email, admin_password);
+        }
+
+        public List<Member> LastAddSellers()
+        {
+            return _memberRepository.LastAddSellers();
+        }
+
+        public List<Member> StarSellers()
+        {
+            return _memberRepository.StarSellers();
         }
 
         public bool Update(Member entity)

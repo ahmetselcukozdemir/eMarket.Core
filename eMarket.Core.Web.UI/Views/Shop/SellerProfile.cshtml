@@ -1,22 +1,8 @@
-﻿@model eMarket.Core.Web.UI.Models.ProductViewModel
-@{ ViewData["Title"] = "Products";
-                Layout = "~/Views/Shared/_Layout.cshtml";
-                ViewData["Active"] = "Products"; }
-
-@Html.Partial("_MenuTwoLayout")
-<!--/ End Header Inner -->
-</header>
-<!--/ End Header -->
-@{ if (@ViewBag.DuplicateDataMessage != null)
-                {
-    <div class="row ml-auto pull-right" style="position:absolute; top: 10px !important; right: 25px !important;">
-        <div class="alert-group" style="width:100%">
-            <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong>Uyarı !</strong> @ViewBag.DuplicateDataMessage
-            </div>
-        </div>
-    </div> } }
+﻿@model eMarket.Core.Entity.Member
+@{
+    ViewData["Title"] = "SellerProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 <!-- Breadcrumbs -->
 <div class="breadcrumbs">
@@ -367,8 +353,3 @@
         };
 </script>}
 
-@if (ViewData["Active"] != null)
-{
-<script type="text/javascript">
-        document.getElementById("@ViewData["Active"]").classList.add("active")
-</script>}

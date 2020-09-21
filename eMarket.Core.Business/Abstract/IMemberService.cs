@@ -12,6 +12,9 @@ namespace eMarket.Core.Business.Abstract
         bool Create(Member entity);
         bool Update(Member entity);
         List<Member> GetAllMembers();
+        List<Member> LastAddSellers();
+        List<Member> StarSellers();
+        List<Member> AllMemberIsHome();
         Member GetByMailAndPasswordWithUser(string admin_email, string admin_password);
     }
 }

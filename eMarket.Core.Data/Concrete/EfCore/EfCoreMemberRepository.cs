@@ -10,11 +10,20 @@ namespace eMarket.Core.Data.Concrete.EfCore
 {
    public class EfCoreMemberRepository : EfCoreGenericRepository<Member, eMarketContext>, IMemberRepository
     {
+        public List<Member> AllMemberIsHome()
+        {
+            using (var context = new eMarketContext())
+            {
+                var members = context.Members.Where(x => x.IsAdmin == false && x.IsActive==true && x.IsCheck==true).ToList();
+                return members;
+            }
+        }
+
         public List<Member> GetAllMembers()
         {
             using (var context = new eMarketContext())
             {
-                var members = context.Members.ToList();
+                var members = context.Members.Where(x=>x.IsAdmin==false).ToList();
                 return members;
             }
         }
@@ -32,8 +41,26 @@ namespace eMarket.Core.Data.Concrete.EfCore
         {
             using (var context = new eMarketContext())
             {
-                var member = context.Members.Where(x => x.Email == admin_email && x.Password == admin_password).FirstOrDefault();
+                var member = context.Members.Include("Products").Where(x => x.Email == admin_email && x.Password == admin_password).FirstOrDefault();
                 return member;
+            }
+        }
+
+        public List<Member> LastAddSellers()
+        {
+            using (var context = new eMarketContext())
+            {
+                return context.Members.Where(x => x.IsActive == true && x.IsAdmin == false)
+                    .OrderByDescending(x => x.CreatedDate).Take(10).ToList();
+            }
+        }
+
+        public List<Member> StarSellers()
+        {
+            using (var context = new eMarketContext())
+            {
+                return context.Members.Where(x => x.IsAdmin == false && x.IsActive == true && x.IsCheck == true)
+                    .ToList();
             }
         }
 

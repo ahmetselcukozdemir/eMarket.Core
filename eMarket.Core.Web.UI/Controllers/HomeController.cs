@@ -34,6 +34,7 @@ namespace eMarket.Core.Web.UI.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Current = "Index";
             var categories = _adminService.GetAllCategory();
             if (categories != null)
             {

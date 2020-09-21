@@ -29,6 +29,7 @@ namespace eMarket.Web.UI.Controllers
         [HttpPost]
         public IActionResult Register(RegisterModel model)
         {
+            ViewBag.Current = "Register";
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -59,6 +60,7 @@ namespace eMarket.Web.UI.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            ViewBag.Current = "Login";
             if (!string.IsNullOrEmpty(Request.Cookies["LastLoggedInTime"]))
             {
                 ViewBag.LTLD = Request.Cookies["LastLoggedInTime"].ToString();

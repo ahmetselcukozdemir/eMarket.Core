@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eMarket.Core.Business.Abstract;
 using eMarket.Core.Entity;
 using eMarket.Core.Web.UI.Models;
+using eMarket.Core.Web.UI.Models.Home;
 using eMarket.Web.UI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Headers;
@@ -15,13 +16,16 @@ namespace eMarket.Web.UI.Controllers
     public class ShopController : Controller
     {
         private IProductService _productService;
+        private IMemberService _memberService;
 
-        public ShopController(IProductService productService)
+        public ShopController(IProductService productService, IMemberService memberService)
         {
             this._productService = productService;
+            this._memberService = memberService;
         }
         public IActionResult Products()
         {
+            ViewBag.Current = "Products";
             if (HttpContext.Session.GetString("Name") != null && HttpContext.Session.GetString("ID") != null)
             {
                 ViewBag.Name = HttpContext.Session.GetString("Name");
@@ -55,6 +59,32 @@ namespace eMarket.Web.UI.Controllers
                 Product = product,
                 RelatedProducts = relatedProducts
             });
+        }
+
+        public IActionResult Sellers()
+        {
+            ViewBag.Current = "Sellers";
+            var lastSellers = _memberService.LastAddSellers();
+            var getAllSellers = _memberService.AllMemberIsHome();
+            var starSellers = _memberService.StarSellers();
+            var entity = new SellersModel()
+            {
+                LastAddSellers = lastSellers,
+                GetAllSellers = getAllSellers,
+                StarSellers = starSellers
+            };
+            return View(entity);
+        }
+
+        public IActionResult SellerProfile(int? id)
+        {
+            ViewBag.Current = "SellerProfile";
+            if (id != null)
+            {
+                var sellersProfile = "";
+                return View(sellersProfile);
+            }
+            return View();
         }
     }
 }
